@@ -16,19 +16,30 @@
     <h2>Etch-A-Sketch</h2>
     
     <div class="header">
-        <h6>Select Size</h6>
-        <button id="popup" class="btn btn-outline-dark">Select </button> 
+        <h6>Click  <button id="popup" class="btn btn-outline-dark"> Select </button> to change pixel size: </h6>
+       
+        <p id="message"></p>
     </div>
+
+    <div class="colorArea"> 
+        <button type="button" class="btn btn-outline-dark"
+         onclick="setColor('black')">Black</button>
+        <button type="button" class="btn btn-outline-dark"
+         onclick="setColor('red')">Red</button>
+         <button type="button" class="btn btn-outline-dark"
+         onclick="setColor('blue')">Blue</button>
+        <button class="btn btn-outline-dark" 
+        onclick="setColor('random')">Random</button>
+        <button class="btn btn-outline-dark" 
+        onclick="setColor('azure')">Erase</button>
+        <button class="btn btn-outline-dark" onclick="clearAll()">Clear All</button>
+        </div>
 
     <div class="board">
-    HI
+
     </div>
 
-    <div class="footer"> 
-    <button type="button" class="btn btn-outline-dark">Black</button>
-    <button class="btn btn-outline-dark">Random</button>
-    <button class="btn btn-outline-dark">Erase</button>
-    </div>
+   
     <script src="etchJs.js"></script>
 </body>
 
