@@ -1,7 +1,7 @@
 let color = "black"
 
 document.addEventListener("DOMContentLoaded", function(){
-    createBoard(16);
+    createBoard(32);
 
     let btn = document.querySelector("#popup");
     btn.addEventListener('click', function (){
@@ -27,13 +27,17 @@ function createBoard(size){
 }
 
 function getSize(){
-    let userInput = prompt("Enter a number between 1 to 100 for create a board.")
+    let userInput = prompt("Enter a number between 1 to 200 for create a board.");
     let message = document.querySelector("#message");
-    message.style.backgroundColor = "pink";
+    message.style.backgroundColor = "khaki";
+    message.style.border = "1px solid red";
+
         if (userInput == "")
-            {message.textContent = "Please enter a number";}
-        else if (userInput < 1 || userInput > 100){
-            message.textContent = "Enter a number between 1 to 100.";
+            {message.textContent = "Please enter a number";
+        }
+     
+        else if (userInput < 1 || userInput > 201){
+            message.textContent = "Enter a number between 1 to 200.";
         }
         else {
             message.textContent = "Let's Draw!";
@@ -64,7 +68,7 @@ function setColor(colorChoice){
 
 function clearAll(){
     let inner = document.querySelectorAll("#innerDiv");
-    inner.forEach((div) => div.style.backgroundColor= "azure");
+    inner.forEach((div) => div.style.backgroundColor = "azure");
 
     }
 
